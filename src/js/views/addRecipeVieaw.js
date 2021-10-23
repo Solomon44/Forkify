@@ -4,6 +4,8 @@ import View from './view';
 class AddRecipeView extends View {
   _parentElement = document.querySelector('.upload');
 
+  _message = 'Recipe was seccessfully uploaded';
+
   _window = document.querySelector('.add-recipe-window');
   _overlay = document.querySelector('.overlay');
   _btnOpenWindow = document.querySelector('.nav__btn--add-recipe');
@@ -42,4 +44,3 @@ class AddRecipeView extends View {
   _generateMarkup() {}
 }
 export default new AddRecipeView();
-console.log('add');

@@ -4,7 +4,7 @@ const Fraction = require('fractional').Fraction;
 
 class ResipeView extends View {
   _parentElement = document.querySelector('.recipe');
-  _messageError = 'We could not find the resipe, please try again';
+  _messageError = 'We could not find the recipe, please try again';
   _message = '';
 
   _generateMarkup() {
