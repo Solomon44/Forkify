@@ -1,8 +1,5 @@
-import 'regenerator-runtime/runtime';
-import 'core-js/stable';
-import { MODAL_CLOSE_SEC } from './config.js';
-
 import * as model from './model.js';
+import { MODAL_CLOSE_SEC } from './config.js';
 import recipeView from './views/recipeView';
 import searchView from './../js/views/searchView';
 import resultView from './../js/views/resultView';
@@ -10,9 +7,9 @@ import paginationView from './../js/views/paginationView';
 import bookmarksView from './views/bookmarksView';
 import addRecipeVieaw from './../js/views/addRecipeVieaw';
 
-if (module.hot) {
-  module.hot.accept();
-}
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import { async } from 'regenerator-runtime';
 
 //RENDERING RESIPE
 const controlRecipes = async function () {
@@ -103,6 +100,12 @@ const controladdRecipe = async function (newRecipe) {
 
     //recipe upload seccess message
     addRecipeVieaw.renderMessage();
+
+    //Render the bookmarksView
+    bookmarksView.render(model.state.bookmarks);
+
+    //Change ID in URL
+    window.history.pushState(null, '', `#${(model.state, recipe.id)}`);
 
     //close the upload recipe window
     setTimeout(function () {

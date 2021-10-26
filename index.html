@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="src/sass/main.scss" />
-    <script defer src="src/js/controller.js"></script>
+    <script type="module" defer src="src/js/controller.js"></script>
 
     <title>forkify // Search over 1,000,000 recipes</title>
   </head>
@@ -73,7 +73,7 @@
                         <h4 class="preview__name">
                           Pasta with Tomato Cream ...
                         </h4>
-                        <p class="preview__publisher">The Pioneer Woman</p>
+                        <p class="preview__author">The Pioneer Woman</p>
                       </div>
                     </a>
                   </li> -->
@@ -122,25 +122,25 @@
         </div>
 
         <p class="copyright">
-          &copy; Copyright by
+          &copy; Built by
           <a
-            class=""
+            class="twitter-link"
             target="_blank"
             href="https://www.linkedin.com/in/solomon-melaku-5788931b3/"
-            >Solomon Melaku</a
+            >Solomn Melaku</a
           >
         </p>
       </div>
 
       <div class="recipe">
-        <!-- <div class="message">
+        <div class="message">
           <div>
             <svg>
               <use href="src/img/icons.svg#icon-smile"></use>
             </svg>
           </div>
           <p>Start by searching for a recipe or an ingredient. Have fun!</p>
-        </div> -->
+        </div>
 
         <!-- <div class="spinner">
           <svg>
@@ -266,7 +266,7 @@
           <label>URL</label>
           <input value="TEST23" required name="sourceUrl" type="text" />
           <label>Image URL</label>
-          <input value="TEST23" required name="imageUrl" type="text" />
+          <input value="TEST23" required name="image" type="text" />
           <label>Publisher</label>
           <input value="TEST23" required name="publisher" type="text" />
           <label>Prep time</label>
