@@ -9,7 +9,7 @@ class SearchView extends View {
     return query;
   }
 
-  #clearInput() {
+  clearInput() {
     this._perentElement.querySelector('.search__field').value = '';
   }
   addHandlerSearch(handler) {
